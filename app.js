@@ -1,8 +1,11 @@
 //app.js
+let count = 0
 App({
   data : {
-    url : 'https://www.baidu.com'
+    url: 'https://www.waimaitong.xin',
+    formIds: [],
   },
+
   postData : function(url, data, header) {
     var _this = this;
     var promise = new Promise(() => {
@@ -95,9 +98,10 @@ App({
     })
     return promise
   },
+
   getData : function(url) {
     var _this = this;
-    var promise = new Promise(() => {
+    var promise = new Promise((resolve,reject) => {
       wx.request({
         url : _this.data.url + url,
         success : function(res){
@@ -174,6 +178,7 @@ App({
     })
     return promise
   },
+
   chooseLocation : function(){
     var promise = new Promise((resolve, reject) => {
       wx.authorize({
@@ -184,11 +189,16 @@ App({
               resolve(res)
             },
             fail : function(res){
+              
               wx.getSetting({
                 success : function(res){
                   if(res.authSetting["scope.userLocation"]){
 
                   }else{
+                    count++
+                    if (count <= 1) {
+                      return
+                    }
                     wx.navigateTo({
                       url: '../authorization/authorization',
                     })
@@ -205,6 +215,11 @@ App({
               if (res.authSetting["scope.userLocation"]) {
               }
               else {
+                count++
+                console.log(count)
+                if (count <= 1) {
+                  return
+                }
                 wx.navigateTo({
                   url: '../authorization/authorization',
                 })
@@ -216,10 +231,50 @@ App({
     })
     return promise
   },
+
+  //添加formid
+  addFormid: function () {
+    var that = this
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        // console.log(res.data.openid)
+        that.post('template/get_forms_id', { 'openid': res.data.openid, 'form_ids': that.data.formIds.join(',') }).then((res) => {
+          console.log(res)
+          if (res.code == 200) {
+            that.data.formIds = []
+          }
+        })
+      },
+    })
+
+  },
+
+  //收集formid
+  getFormid: function (e) {
+    console.log(e.detail.formId)
+    if (e.detail.formId == 'the formId is a mock one') return
+    var timestamp = Date.parse(new Date()) / 1000;
+    var pushData = e.detail.formId + '-' + timestamp
+    this.data.formIds.push(pushData)
+    console.log(this.data.formIds)
+  },
+
+  showToast: function (msg) {
+    wx.showToast({
+      title: msg,
+      icon: 'none',
+      mask: true,
+      duration: 1500
+    })
+  },
+
+
   onLaunch : function() {
     var _this = this;
     let userInfo = wx.getStorageSync('userInfo');
   },
+  
   globalData : {
     
   }

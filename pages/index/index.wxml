@@ -1,24 +1,72 @@
-<view>
-   <view class="clearfix index-userInfo">
-      <view class="index-name left">小马</view>
-      <view class="index-department right">朝阳四组</view>
-   </view>
-   <view class="index-entry">2018-07-01</view>
-   <view class="index-classification">
-      <view class="index-toRegister">
-          登记商户信息
-      </view>
-      <view class="index-myMerchant">
-            我的商户
-      </view>
-      <view class="index-findCommodity">
-            发现商品
-      </view>
-      <view class="index-myInfo">
-            个人信息
-      </view>
-      <view class="index-mySubordinate">
-            我的下属
-      </view>
-    </view>
+<form report-submit='true' data-index='4' bindsubmit='getFormid'>
+  <view class='pr'>
+    <view class='jw-register'>登记商户信息</view>
+    <button  bindtap='goNav' data-index='4' form-type='submit' class='getFormIdBtn'></button>
+  </view>
+</form>
+
+<view class='jw-bdMsg-view'>
+  <view class='jw-bdMsg-item'>
+    <image class='jw-bdMsg-img'></image>
+    <view class='jw-bdMsg-text'>{{bdName}}</view>
+  </view>
+  <view class='jw-bdMsg-item'>
+    <image class='jw-bdMsg-img'></image>
+    <view class='jw-bdMsg-text'>{{bdGroup}}</view>
+  </view>
+  <view class='jw-bdMsg-item'>
+    <image class='jw-bdMsg-img'></image>
+    <view class='jw-bdMsg-text'>{{bdDate}}</view>
+  </view>
 </view>
+
+<view class='jw-options-view'>
+  
+  <form report-submit='true' class='jw-options-item'  bindsubmit='getFormid'>
+    <view class='pr'>
+      <view  class=''>
+        <image class='jw-options-img'></image>
+        <view class='jw-options-text'>我的商户</view>
+      </view>
+      <button bindtap='goNav' data-index='0' form-type='submit' class='getFormIdBtn'></button>
+    </view>
+    
+  </form>
+ 
+  <form report-submit='true' class='jw-options-item' bindsubmit='getFormid'>
+    <view class='pr'>
+       <view  class=''>
+        <image class='jw-options-img'></image>
+        <view class='jw-options-text'>发现商品</view>
+      </view>
+      <button bindtap='goNav' data-index='1' form-type='submit' class='getFormIdBtn'></button>
+    </view>
+    
+  </form>
+
+  <form report-submit='true' class='jw-options-item' bindsubmit='getFormid'>
+    <view class='pr'>
+       <view  class=''>
+        <image class='jw-options-img'></image>
+        <view class='jw-options-text'>个人信息</view>
+      </view>
+      <button bindtap='goNav' data-index='2' form-type='submit' class='getFormIdBtn'></button>
+    </view>
+   
+  </form>
+
+  <form report-submit='true' class='jw-options-item' bindsubmit='getFormid'>
+    <view class='pr'>
+       <view  class=''>
+        <image class='jw-options-img'></image>
+        <view class='jw-options-text'>我的下属</view>
+      </view>
+      <button bindtap='goNav' data-index='3' form-type='submit' class='getFormIdBtn'></button>
+    </view>
+    
+  </form>
+</view>
+
+<!-- <view style='width:300px;height:200px;background:red;position:relative'>
+  <button bindtap='goNav4' data-index='5' form-type='submit' class='getFormIdBtn'></button>
+</view> -->
