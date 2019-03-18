@@ -5,10 +5,20 @@
    </view>
    <view class="index-entry">2018-07-01</view>
    <view class="index-classification">
-      <view>
-         <view class="toRe">
-            
-         </view>
+      <view class="index-toRegister">
+          登记商户信息
       </view>
-   </view>
+      <view class="index-myMerchant">
+            我的商户
+      </view>
+      <view class="index-findCommodity">
+            发现商品
+      </view>
+      <view class="index-myInfo">
+            个人信息
+      </view>
+      <view class="index-mySubordinate">
+            我的下属
+      </view>
+    </view>
 </view>
