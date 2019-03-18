@@ -1,12 +1,19 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/input/input",
+    "pages/login/login",
     "pages/logs/logs"
   ],
+  "permission" : {
+     "scope.userLocation" : {
+        "desc" : "你的位置信息将用于店铺信息展示"
+     }
+  },
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#3A4BF9",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   }
 }

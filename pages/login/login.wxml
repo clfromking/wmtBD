@@ -1,0 +1,8 @@
+<!--pages/login/login.wxml-->
+<view class="lc-login-logo">
+	<image src="https://waimaitong.oss-cn-beijing.aliyuncs.com/wechat/all/logo.png"></image>
+</view>
+<view class="lc-login-title">外卖通</view>
+<view class="lc-login-border"></view>
+<view class="lc-login-content">以便外卖通为您提供更好的服务</view>
+<button class="lc-login-btn" bindgetuserinfo="getuserinfo" open-type="getUserInfo">确认授权</button>

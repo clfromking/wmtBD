@@ -1,0 +1,12 @@
+/* pages/input/input.wxss */
+.lc-input-captcha{
+	margin-left: 100rpx;
+}
+.choose{
+	color: red;
+}
+.test{
+	width: 200rpx;
+	height: 50rpx;
+	background-color: red;
+}

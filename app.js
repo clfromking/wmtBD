@@ -1,39 +1,226 @@
 //app.js
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
+  data : {
+    url : 'https://www.baidu.com'
+  },
+  postData : function(url, data, header) {
+    var _this = this;
+    var promise = new Promise(() => {
+      wx.request({
+        url : _this.data.url + url,
+        data : data,
+        method : 'POST',
+        header : {
+          'content-type' : header || 'application/x-www-form-urlencoded'
+        },
+        success : function(res){
+          if(res.data.code == 401) {
+            wx.showToast({
+              title : '登录超时，请重新登录',
+              icon : 'none',
+              duration : 1500,
+              mask : true
+            })
+            setTimeout(function() {
+              wx.navigateTo({
+                url : '../login/login'
+              },1500)
+            })
+          }
+          else if(res.data.code == 200) {
+            resolve(res);
+          }
+          else if((Number(res.data.code)>=1 && Number(res.data.code)<=199) || (Number(res.data.code)>500 && Number(res.data.code)<=9999)) {
+            wx.showToast({
+              title : '服务器错误，请重试！',
+              icon : 'none',
+              duration : 1500,
+              mask : true
+            })
+          }
+          else if(res.data.code == 500){
+            if(res.data.msg){
+              wx.showToast({
+                title : res.data.msg,
+                icon : 'none',
+                duration : 1500,
+                mask : true
+              })
+            }
+          }
+          else if(Number(res.data.code)>=300 && Number(res.data.code)<=499){
+            resolve(res)
+            if(Number(res.data.code) == 404){
+              wx.hideLoading()
+              return
+            }
+            else if(Number(res.data.code) == 403){
+              wx.hideLoading()
+              return
+            }
+            else if(Number(res.data.code) == 412){
+              wx.hideLoading()
+              return
+            }
+            else if(Number(res.data.code) == 400){
+              wx.hideLoading()
+              return
+            }
+            wx.showToast({
+              title : res.data.msg,
+              icon : 'none',
+              duration : 1500,
+              mask : true
+            })
+          }
+        },
+        fail : function(){
+          wx.showToast({
+            title : '网络错误，请重试',
+            icon : 'none',
+            duration : 1500,
+            mask : true
+          })
+        },
+        error : function(e){
+          wx.showToast({
+            title : '服务器错误，请重试！',
+            icon : 'none',
+            duration : 1500,
+            mask : true
+          })
+          reject(e)
+        }
+      })
     })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
+    return promise
+  },
+  getData : function(url) {
+    var _this = this;
+    var promise = new Promise(() => {
+      wx.request({
+        url : _this.data.url + url,
+        success : function(res){
+          if(res.data.code == 401) {
+            wx.showToast({
+              title : '登录超时，请重新登录',
+              icon : 'none',
+              duration : 1500,
+              mask : true
+            })
+            setTimeout(function() {
+              wx.navigateTo({
+                url : '../login/login'
+              },1500)
+            })
+          }
+          else if(res.data.code == 200) {
+            resolve(res);
+          }
+          else if((Number(res.data.code)>=1 && Number(res.data.code)<=199) || (Number(res.data.code)>500 && Number(res.data.code)<=9999)) {
+            wx.showToast({
+              title : '服务器错误，请重试！',
+              icon : 'none',
+              duration : 1500,
+              mask : true
+            })
+          }
+          else if(res.data.code == 500){
+            if(res.data.msg){
+              wx.showToast({
+                title : res.data.msg,
+                icon : 'none',
+                duration : 1500,
+                mask : true
+              })
+            }
+          }
+          else if(Number(res.data.code)>=300 && Number(res.data.code)<=499){
+            resolve(res)
+            if(Number(res.data.code) == 404){
+              wx.hideLoading()
+              return
+            }
+            else if(Number(res.data.code) == 403){
+              wx.hideLoading()
+              return
+            }
+            wx.showToast({
+              title : res.data.msg,
+              icon : 'none',
+              duration : 1500,
+              mask : true
+            })
+          }
+        },
+        fail : function(){
+          wx.showToast({
+            title : '网络错误，请重试',
+            icon : 'none',
+            duration : 1500,
+            mask : true
+          })
+        },
+        error : function(e){
+          wx.showToast({
+            title : '服务器错误，请重试！',
+            icon : 'none',
+            duration : 1500,
+            mask : true
+          })
+          reject(e)
+        }
+      })
+    })
+    return promise
+  },
+  chooseLocation : function(){
+    var promise = new Promise((resolve, reject) => {
+      wx.authorize({
+        scope : 'scope.userLocation',
+        success : function(res){
+          wx.chooseLocation({
+            success : function(res){
+              resolve(res)
+            },
+            fail : function(res){
+              wx.getSetting({
+                success : function(res){
+                  if(res.authSetting["scope.userLocation"]){
 
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
+                  }else{
+                    wx.navigateTo({
+                      url: '../authorization/authorization',
+                    })
+                  }
+                }
+              })
+            }
+          })
+        },
+        fail : function(res){
+          wx.getSetting({
+            success(res) {
+              console.log(res)
+              if (res.authSetting["scope.userLocation"]) {
+              }
+              else {
+                wx.navigateTo({
+                  url: '../authorization/authorization',
+                })
               }
             }
           })
         }
-      }
+      })
     })
+    return promise
   },
-  globalData: {
-    userInfo: null
+  onLaunch : function() {
+    var _this = this;
+    let userInfo = wx.getStorageSync('userInfo');
+  },
+  globalData : {
+    
   }
 })
