@@ -38,6 +38,9 @@
 .red{
   color: red
 }
+.blue{
+  color: #5BA2FD;
+}
 .xing{
   color: red;
   margin-right: 6rpx

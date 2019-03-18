@@ -1,0 +1,34 @@
+<!--pages/myBusiness/myBusiness.wxml-->
+<view hidden='{{nothing}}' class='jw-container'>
+  
+  <view class='jw-title clearfix'>
+    <text class='left'>共{{total}}个商户</text>
+    <text class='right'>地图查看</text>
+  </view>
+
+  <view class='jw-list' wx:for='{{list}}' wx:key='item'>
+    <view class='jw-list-item pr'>
+      <view class='jw-businessName'>小马快餐（酒仙桥店）</view>
+      <view class='jw-headPerson'>负责人：小马</view>
+      <view class='jw-headPhone'>手机：14400010001</view>
+      <view class='jw-address'>
+        <text>地址：</text>
+        <view>北京市朝阳区酒仙桥东路18号尚科办公社区B座底商</view>
+      </view>
+      <view class='jw-btnsView'>
+        <view bindtap='goNav' data-id='0' class='jw-btns-item'>基础数据</view>
+        <view bindtap='goNav' data-id='1' class='jw-btns-item'>立地数据</view>
+        <view bindtap='goNav' data-id='2' class='jw-btns-item'>拜访记录</view>
+      </view>
+      
+      <view class='jw-phone' data-index='{{index}}' bindtap='callPhone'></view>
+
+    </view>
+  </view>
+
+  <view class='jw-footer'>{{footer}}</view>
+
+</view>
+
+<view hidden='{{!nothing}}' class='jw-nothing'>暂无商户</view>
+

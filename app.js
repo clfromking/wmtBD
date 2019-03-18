@@ -4,11 +4,11 @@ App({
   data : {
     url: 'https://www.waimaitong.xin',
     formIds: [],
-  },
+  },  
 
   postData : function(url, data, header) {
     var _this = this;
-    var promise = new Promise(() => {
+    var promise = new Promise((resolve,reject) => {
       wx.request({
         url : _this.data.url + url,
         data : data,
@@ -269,6 +269,17 @@ App({
     })
   },
 
+
+  isPhone:function($poneInput) {
+    console.log
+    var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+    if(!myreg.test($poneInput)) {
+      return false;
+    } 
+    else {
+      return true;
+    }
+  },
 
   onLaunch : function() {
     var _this = this;

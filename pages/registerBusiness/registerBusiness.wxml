@@ -3,17 +3,17 @@
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'><text class='red xing'>*</text>商户名称</text>
-    <input class='jw-formItem-input' placeholder='请输入商户名称' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='0' value='{{formData.businessName}}' class='jw-formItem-input' placeholder='请输入商户名称' placeholder-class='placeholderInput'></input>
   </view>
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'><text class='red xing'>*</text>负责人姓名</text>
-    <input class='jw-formItem-input' placeholder='请输入负责人姓名' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='1' value='{{formData.personName}}' class='jw-formItem-input' placeholder='请输入负责人姓名' placeholder-class='placeholderInput'></input>
   </view>
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'><text class='red xing'>*</text>负责人手机</text>
-    <input class='jw-formItem-input' placeholder='请输入负责人手机' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='2' value='{{formData.personPhone}}' type='number' maxlength='11' class='jw-formItem-input' placeholder='请输入负责人手机' placeholder-class='placeholderInput'></input>
   </view>
 
   <view class='jw-formItem'>
@@ -22,7 +22,7 @@
       <form bindsubmit='getFormid' report-submit='true'>
         <button form-type='submit' class='getFormIdBtn' ></button>
         <view class="picker {{manageClass[manageClassIndex]?'':'placeholderInput'}}">
-          {{manageClass[manageClassIndex]||"请选择经营品类"}}
+          {{manageClass[manageClassIndex]||"请选择经营类型"}}
         </view>
       </form>
     </picker>
@@ -78,17 +78,17 @@
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'><text class='red xing'>*</text>街道</text>
-    <input class='jw-formItem-input' placeholder='请输入街道' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='3' value='{{formData.street}}' class='jw-formItem-input' placeholder='请输入街道' placeholder-class='placeholderInput'></input>
   </view>
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'><text class='red xing'>*</text>详细地址</text>
-    <input class='jw-formItem-input' placeholder='请输入详细地址' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='4' value='{{formData.address}}' class='jw-formItem-input' placeholder='请输入详细地址' placeholder-class='placeholderInput'></input>
   </view>
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'><text class='red xing'>*</text>商户坐标</text>
-    <view class='jw-formItem-input {{coordinates?"":"placeholderInput"}}' bindtap='openLocation' >{{coordinates||"尚未开启定位，请先开启。点击设置。"}}</view>
+    <view class='jw-formItem-input {{coordinates?"blue":"placeholderInput"}}' bindtap='openLocation' >{{coordinates||"尚未开启定位，请先开启。点击设置。"}}</view>
   </view>
 
   <view class='jw-formItem'>
@@ -101,18 +101,54 @@
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'>营业执照号</text>
-    <input class='jw-formItem-input' placeholder='请输入营业执照号' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='5' value='{{formData.licenseCode}}' class='jw-formItem-input' placeholder='请输入营业执照号' placeholder-class='placeholderInput'></input>
   </view>
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'>过期时间</text>
-    <input class='jw-formItem-input' placeholder='请输入过期时间' placeholder-class='placeholderInput'></input>
+    <picker mode="date" value="{{date}}" start="{{nowDate}}" bindchange="bindDateChange">
+      <view class="picker {{date?'':'placeholderInput'}}">
+        {{date||"请选择过期时间"}}
+      </view>
+    </picker>
   </view>
 
   <view class='jw-formItem'>
     <text class='jw-formItem-title'>日订单总量</text>
-    <input class='jw-formItem-input' placeholder='请输入日订单总量' placeholder-class='placeholderInput'></input>
+    <input bindinput='bindInput' data-index='6' value='{{formData.orderTotalNum}}' type='number' class='jw-formItem-input' placeholder='请输入日订单总量' placeholder-class='placeholderInput'></input>
   </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'>已上线平台</text>
+    <picker class='pr' bindchange="pickerChange" data-index='3' value="{{platformClassIndex}}" range="{{platformClass}}">
+      <form bindsubmit='getFormid' report-submit='true'>
+        <button form-type='submit' class='getFormIdBtn' ></button>
+        <view class="picker {{platformClass[platformClassIndex]?'':'placeholderInput'}}">
+          {{platformClass[platformClassIndex]||"请选择已上线平台"}}
+        </view>
+      </form>
+    </picker>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'>现有门店数量</text>
+    <input bindinput='bindInput' data-index='7' value='{{formData.storeNum}}' type='number' class='jw-formItem-input' placeholder='请输入现有门店数量' placeholder-class='placeholderInput'></input>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'>备注</text>
+  </view>
+  <textarea bindinput='bindInput' data-index='8' value='{{formData.note}}' placeholder='请填写备注信息' maxlength='200' placeholder-class='placeholderInput'></textarea>
+
+  <form bindsubmit='getFormid' report-submit='true'>
+    <view class='pr'>
+        <view class='jw-submitBtn'>提交</view>
+        <button  form-type='submit' bindtap='submitForm' class='getFormIdBtn' ></button>
+    </view>
+  </form>
+  
 
 
 </view> 
+
+

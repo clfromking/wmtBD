@@ -12,11 +12,10 @@ Page({
   },
 
   goNav:function(e){
-    console.log(e)
     switch(Number(e.currentTarget.dataset.index)){
       case 0:
         wx.navigateTo({
-          url: '',
+          url: '../myBusiness/myBusiness?type=0',
         })
         break;
       case 1:

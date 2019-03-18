@@ -1,0 +1,87 @@
+/* pages/myBusiness/myBusiness.wxss */
+page{
+  padding-bottom: 50rpx
+}
+.jw-container{
+  width: 690rpx;
+  margin: 0 auto
+}
+.jw-title{
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #4F4F4F;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+  position: fixed;
+  top: 0;
+  width: 690rpx;
+  background: #fff;
+  z-index: 9
+}
+.jw-list:nth-child(2){
+  margin-top: 100rpx;
+  
+}
+
+.jw-list-item{
+  box-shadow: 0 0 8rpx 0 rgba(0, 0, 0, 0.1);
+  color: #4F4F4F;
+  /* padding-top: 25rpx; */
+  padding: 25rpx 10rpx;
+  margin-bottom: 30rpx
+  /* height: 100px */
+}
+.jw-businessName{
+  font-size: 32rpx;
+  margin-bottom: 25rpx
+}
+.jw-headPerson,.jw-headPhone,.jw-address{
+  font-size: 28rpx;
+  margin-bottom: 25rpx
+}
+.jw-address{
+  display: flex
+}
+.jw-address text{
+  width: 92rpx
+}
+.jw-address view{
+  width: 390rpx
+}
+.jw-btnsView{
+  height: 60rpx;
+  margin-top: 20rpx
+}
+.jw-btns-item{
+  width: 134rpx;
+  height: 60rpx;
+  display: inline-block;
+  background: #5BA2FD;
+  border-radius: 10rpx;
+  margin-right: 22rpx;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 60rpx;
+  /* margin-top: 20rpx */
+}
+.jw-phone{
+  width: 100rpx;
+  height: 100rpx;
+  background: #5BA2FD;
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx
+}
+.jw-footer{
+  font-size: 32rpx;
+  color: #4F4F4F;
+  text-align: center;
+  margin-top: 50rpx
+}
+.jw-nothing{
+  text-align: center;
+  font-size: 32rpx;
+  color: #4F4F4F;
+  padding-top: 220rpx
+}
