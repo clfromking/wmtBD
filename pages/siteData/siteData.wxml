@@ -1,0 +1,104 @@
+<!--pages/siteData/siteData.wxml-->
+<view class='jw-container' hidden='{{!showWriteForm}}'>
+  <view class='jw-forms-item' data-index='{{index}}' wx:for='{{formItems}}' wx:for-item='item' wx:for-index='index' wx:key='item'>
+    <view class='jw-forms-item-title'><text class='red xing'>*</text>{{item.title}}</view>
+    <view class='jw-radios-view'>
+      <view wx:for-items='{{item.area}}' wx:for-index='index1' wx:key='item1' wx:for-item='item1' data-parentIndex='{{index}}' bindtap='selectRadio' data-index='{{index1}}'>
+        <text class='jw-radio'><text class='{{item.isChecked===index1?"isChecked":""}}'></text></text>
+        <text class='jw-radio-text'>{{item1}}</text>
+      </view>
+    </view>
+    <view class='jw-radios-input-view clearfix'>
+      <input value='{{item.value}}' data-index='{{index}}' bindinput='bindInput' disabled='{{item.disabled}}' placeholder='{{index==11?"请输入进货渠道":""}}' class='jw-radios-input right' wx:if='{{item.haveInput}}'></input>
+    </view>
+  </view>
+
+  <view>
+    <text class='jw-forms-item-title'><text class='red xing'>*</text>位置确认</text>
+    <text class='jw-coordinates {{coordinates?"blue":"placeholderInput"}}' bindtap='openLocation' >{{coordinates||"尚未开启定位，请先开启。点击设置。"}}</text>
+  </view>
+  
+  <view class='jw-submit-btn' bindtap='submitForm'>提交</view>
+
+</view>
+
+
+<view class='jw-container' hidden='{{!showFormData}}'>
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店铺状态</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+    
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>商圈分类</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店铺类型</text>
+   <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>经营类型</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店铺面积</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+  
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>商户经营者结构</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>外卖日营业额</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>堂食日营业额</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店主从事行业年限</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店主年龄</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店主性别</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>主要进货渠道</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>店主经营意识</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+
+  <view class='jw-formItem'>
+    <text class='jw-formItem-title'><text class='red xing'>*</text>位置确认</text>
+    <view class='jw-formItem-input'>{{formData.businessName||'asdasd'}}</view>
+  </view>
+</view>
+
+
+<view hidden='{{type==0||(type==1&&showFormData)}}' class='jw-nothing'>暂无数据</view>
+
+<view class='jw-shade' hidden='{{!loading}}'>
+
+</view>

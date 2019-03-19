@@ -1,0 +1,24 @@
+<!--pages/map/map.wxml-->
+<map
+  class='map'
+  style="width: 100vw; height: 100vh;"
+  id="map" 
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="14" 
+  markers="{{markers}}" 
+  data-markers="{{markers}}" 
+  bindmarkertap='showDetail'
+  bindtap='clearDetail'
+  show-location >
+</map>
+
+<cover-view hidden='{{showIndex==""&&showIndex!==0}}' class='jw-cover-detail'>
+  <cover-view class='jw-cover-title'>
+    <cover-view>{{markers[showIndex].name}}</cover-view>
+    <cover-view class='blue' bindtap='goHere'>前往导航</cover-view>
+  </cover-view>
+  <cover-view class='jw-cover-path' style=' '>
+    {{markers[showIndex].path}}
+  </cover-view>
+</cover-view>

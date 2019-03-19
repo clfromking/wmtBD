@@ -1,0 +1,71 @@
+/* pages/visitRecord/visitRecord.wxss */
+page{
+  padding-bottom: 156rpx
+}
+.jw-container{
+  width: 670rpx;
+  margin: 0 auto
+}
+.jw-title{
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 32rpx;
+  color: #4F4F4F;
+  width: 670rpx;
+  position: fixed;
+  top: 0;
+  left: 40rpx;
+  background: #fff
+}
+.jw-list{
+  margin-top: 96rpx;
+  font-size: 28rpx;
+  color: #4F4F4F
+  /* height: 100px;
+  background: red */
+}
+.right{
+  margin-right: 116rpx
+}
+.clearfix{
+  margin-bottom: 12rpx
+}
+.jw-list-item{
+  border-bottom: 1rpx solid #d7d7d7;
+  padding: 46rpx 0;
+}
+.jw-list-item:nth-last-child(1){
+  border: none
+}
+.jw-footer{
+  font-size: 32rpx;
+  color: #4F4F4F;
+  text-align: center;
+  margin-top: 54rpx
+}
+.jw-addRecord-view{
+  height: 156rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff
+}
+.jw-addRecord{
+  width: 588rpx;
+  height: 96rpx;
+  border: 1rpx solid #AAAAAA;
+  border-radius: 17rpx;
+  line-height: 96rpx;
+  font-size: 36rpx;
+  color: #262626;
+  text-align: center;
+  margin: 30rpx auto
+}
+
+.jw-nothing{
+  text-align: center;
+  font-size: 32rpx;
+  color: #4F4F4F;
+  padding-top: 220rpx
+}
