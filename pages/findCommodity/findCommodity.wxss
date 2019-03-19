@@ -1,0 +1,123 @@
+.lc-commodity-name .star{
+	color: red;
+	position: absolute;
+	left: 56rpx;
+	top: 28rpx;
+}
+.lc-commodity{
+	overflow: hidden;
+}
+.lc-commodity-name{
+	position: relative;
+}
+.lc-commodity-text{
+	display: block;
+	width: 121rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-left: 72rpx;
+	color: #4F4F4F;
+}
+.lc-commodity-name-text{
+	margin-top: 40rpx;
+	margin-bottom: 32rpx;
+}
+.lc-commodity-name-input{
+	display: block;
+	width: 211rpx;
+	height: 40rpx;
+	font-size: 24rpx;
+	line-height: 35rpx;
+	margin-top: 34rpx;
+	margin-left: 86rpx;
+}
+.lc-commodity-image-img{
+	width: 135rpx;
+	height: 135rpx;
+	background-color : #979797;
+	margin-left: 72rpx;
+	margin-top: 32rpx;
+	position: relative;
+}
+.lc-commodity-image-img text{
+	position: absolute;
+	left: 54rpx;
+	top: 40rpx;
+}
+.lc-commodity-image .star{
+	color: red;
+	position: absolute;
+	left: 56rpx;
+	top: 100rpx;
+}
+.lc-commodity-Merchant-text{
+	display: block;
+	width: 239rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	margin-left: 72rpx;
+	margin-top: 36rpx;
+	margin-bottom: 37rpx;
+	color: #4F4F4F;
+}
+.lc-commodity-Merchant-input{
+	display: block;
+	width: 266rpx;
+	height: 40rpx;
+	font-size: 24rpx;
+	line-height: 35rpx;
+	margin-top: 30rpx;
+	margin-left: 86rpx;
+}
+.lc-commodity-area-input{
+	margin-left: 202rpx;
+	margin-top: -6rpx;
+	margin-bottom: 37rpx;
+}
+.lc-commodity-supplier-text{
+	display: block;
+	width: 147rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	color: #4F4F4F;
+	margin-left: 72rpx;
+	color: #4F4F4F;
+	margin-top: -38rpx;
+}
+.lc-commodity-supplier-input{
+	display: block;
+	width: 196rpx;
+	height: 35rpx;
+	font-size: 24rpx;
+	line-height: 33rpx;
+	margin-top: -6rpx;
+	margin-left: 176rpx;
+}
+.lc-commodity-charge-text{
+	margin-top: 0rpx;
+}
+.lc-commodity-charge-input{
+	margin-top:32rpx;
+}
+.lc-commodity-btn-box{
+	width: 587rpx;
+	height: 90rpx;
+	margin-left: 82rpx;
+	border: 1px solid #AAAAAA;
+	margin-top: 200rpx;
+}
+.lc-commodity-btn-box button{
+	display: block;
+	width: 257rpx;
+	height: 47rpx;
+	font-size: 36rpx;
+	line-height: 50rpx;
+	color: #262626;
+	margin-top: 21.5rpx;
+	border: none;
+}
+

@@ -1,0 +1,22 @@
+<view class="userInfo">
+	<view class="lc-userInfo-first lc-userInfo">
+		<text class="lc-userInfo-key">姓名</text>
+		<text class="lc-userInfo-val">科比</text>
+	</view>
+	<view class="lc-userInfo-second lc-userInfo">
+		<text class="lc-userInfo-key tel-key">手机</text>
+		<text class="lc-userInfo-val tel-val">15569745213</text>
+	</view>
+	<view class="lc-userInfo-third lc-userInfo">
+		<text class="lc-userInfo-key department-key">部门</text>
+		<text class="lc-userInfo-val department-val">朝阳四组</text>
+	</view>
+	<view class="lc-userInfo-fourth lc-userInfo">
+		<text class="lc-userInfo-key entrytime-key">入职时间</text>
+		<text class="lc-userInfo-val entrytime-val">2019-3-11</text>
+	</view>
+	<view class="lc-userInfo-fifth lc-userInfo">
+		<text class="lc-userInfo-key changepwd-key">修改密码</text>
+		<text class="lc-userInfo-mt" bindtap="toChangePwd">></text>
+	</view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarBackgroundColor" : "white",
+  "navigationBarTitleText" : "发现商品",
+  "navigationBarTextStyle" : "black",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

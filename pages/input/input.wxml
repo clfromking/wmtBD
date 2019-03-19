@@ -1,19 +1,18 @@
-<view class="click">
-	<text bindtap="display1" class="{{flag == 1?'choose':''}}">密码登录</text>
-	<text bindtap="display2" class="{{flag == 2?'choose':''}}">验证码登录</text>
+<view class="click clearfix">
+	<text bindtap="display1" class="{{flag == 1?'choose':''}} click-text1">密码登录</text>
+	<text bindtap="display2" class="{{flag == 2?'choose':''}} click-text2">验证码登录</text>
 </view>
 
 <view class="lc-input-enterpwd" hidden="{{flag == 2?true:false}}">
 	<form bindsubmit="submit1">
-		<view class="lc-input-enterpwd-tel">
+		<view class="lc-input-enterpwd-tel clearfix">
 			<text>手机号</text>
-			<input type="number" placeholder="请输入手机号" bindinput="entertel1" bindblur="blurtel1" />
+			<input type="number" placeholder="请输入手机号" placeholder-class="placeholder-class" bindinput="entertel1" bindblur="blurtel1" />
 			<view class="tips1">{{tips1}}</view>
 		</view>
-		<view class="lc-input-enterpwd-pwd">
+		<view class="lc-input-enterpwd-pwd clearfix">
 			<text>密码</text>
-			<input type="text" placeholder="请输入密码" password bindinput="enterpwd"  />
-			<view class="tips2">提示2</view>
+			<input type="text" placeholder="请输入密码" placeholder-class="placeholder-class" password bindinput="enterpwd"  />
 		</view>
 	</form>
 </view>
@@ -21,21 +20,20 @@
 
 <view class="lc-input-entercaptcha" hidden="{{flag == 1?true:false}}">
 	<form bindsubmit="submit2">
-		<view class="lc-input-enterpwd-tel">
+		<view class="lc-input-enterpwd-tel clearfix">
 			<text>手机号</text>
 			<input type="text" placeholder="请输入手机号" 
 			bindinput="entertel2" bindblur="blurtel2" />
 			<view class="tips3">{{tips2}}</view>
 		</view>
-		<view class="lc-input-enterpwd-captcha">
+		<view class="lc-input-enterpwd-captcha clearfix">
 			<text>验证码</text>
 			<view class="test"></view>
 			<input type="text" placeholder="请输入验证码" bindinput="entercaptcha" />
 			<button bindtap="getcodes">{{code}}</button>
-			<view class="tips4">提示4</view>
 		</view>
 	</form>
 </view>
 
-<button form-type="submit" bindtap="submitAll">登录</button>
+<button form-type="submit" bindtap="submitAll" class="lc-input-btn">登录</button>
 

@@ -1,0 +1,31 @@
+<view class="lc-list" wx:for="{{source}}" wx:key="{{index}}">
+   <view class="lc-list-time">
+	  {{time}}
+   </view>
+   <view class="lc-list-content">
+	  {{content}}
+   </view>
+   <view class="lc-list-image clearfix">
+	  <scroll-view scroll-x scroll-with-animation class="scroll-view_x">
+		 <image src="" mode="aspectFit" class="lc-list-image-first"></image>
+		 <image src="" mode="aspectFit" bindtap="tocommodityDetail"></image>
+		 <image src="" mode="aspectFit" ></image>
+		 <image src="" mode="aspectFit" ></image>
+		 <image src="" mode="aspectFit" ></image>
+		 <image src="" mode="aspectFit" ></image>
+   	  </scroll-view>
+   </view>	
+   <view class="lc-list-line">
+		
+   </view>
+</view>
+
+<view class="lc-list-tips">
+   已为您展示全部
+</view>
+
+<view class="lc-list-btn-box">
+   <button class="lc-list-btn" plain bindtap="toDetail">
+		提交发现的商品
+   </button>
+</view>

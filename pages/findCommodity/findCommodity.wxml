@@ -1,0 +1,49 @@
+<view>
+	<form action="" class="lc-commodity">
+	   <view class="lc-commodity-name clearfix">
+	   	  <text class="star">*</text>
+	   	  <text class="lc-commodity-name-text left lc-commodity-text">商品名称</text>
+	   	  <input type="text" placeholder="请输入商品名称" placeholder-class="placeholderInput" class="lc-commodity-name-input left" bindinput="getInput" data-index="0" />
+	   </view>
+	   <view class="lc-commodity-image">
+	   	  <text class="star">*</text>
+		  <text class="lc-commodity-image-text lc-commodity-text">商品图片</text>
+		  <view class="lc-commodity-image-img" bindtap="uploadimg"><text>+</text></view>
+	   </view>
+	   <view class="lc-commodity-Merchant clearfix">
+		  <text class="lc-commodity-Merchant-text left">使用此商品的商户</text>
+		  <input type="text" placeholder="请输入使用此商品的商户" placeholder-class="placeholderInput" class="lc-commodity-Merchant-input left" bindinput="getInput" data-index="1" />	
+	   </view>
+	   <view class="lc-commodity-area clearfix">
+		  <text class="lc-commodity-area-text lc-commodity-text left">所在区域</text>
+		  <input type="text" placeholder="请输入所在区域" placeholder-class="placeholderInput" class="lc-commodity-area-input lc-commodity-name-input left" bindinput="getInput" data-index="2" />	
+	   </view>
+	   <view class="lc-commodity-detail clearfix">
+		  <text class="lc-commodity-detail-text lc-commodity-text left">详细地址</text>
+		  <input type="text" placeholder="请输入详细地址" placeholder-class="placeholderInput" class="lc-commodity-area-input lc-commodity-name-input left"bindinput="getInput" data-index="3" />	
+	   </view>
+	   <view class="lc-commodity-supplier clearfix">
+		  <text class="lc-commodity-supplier-text left">
+			 供应商名称
+		  </text>
+		  <input type="text" placeholder="请输入供应商名称" placeholder-class="placeholderInput" class="lc-commodity-supplier-input left" bindinput="getInput" data-index="4" />
+	   </view>
+	   <view class="lc-commodity-supplier clearfix">
+		  <text class="lc-commodity-supplier-text left lc-commodity-charge-text left">
+			 负责人姓名
+		  </text>
+		  <input type="text" placeholder="请输入负责人姓名" placeholder-class="placeholderInput" class="lc-commodity-supplier-input lc-commodity-charge-input left" bindinput="getInput"data-index="5" />
+	   </view>
+	   <view class="lc-commodity-supplier clearfix">
+		  <text class="lc-commodity-supplier-text left lc-commodity-charge-text left">
+			 负责人手机
+		  </text>
+		  <input type="text" placeholder="请输入负责人手机" placeholder-class="placeholderInput" class="lc-commodity-supplier-input lc-commodity-charge-input left" bindinput="getInput" data-index='6' />
+	   </view>
+	</form>
+	<view class="lc-commodity-btn-box">
+	   <button plain bindtap="submitInput">
+			提交
+	   </button>	
+	</view>
+</view>

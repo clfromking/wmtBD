@@ -1,0 +1,81 @@
+.lc-changePwd-old{
+	margin-top: 40rpx;
+	position: relative;
+}
+.lc-changePwd-text{
+	display: block;
+	width: 91rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-top: 6rpx;
+	margin-right: 130rpx;
+	margin-bottom: 50rpx;
+	margin-left: 33rpx
+}
+.lc-changePwd-input{
+	height: 38rpx;
+	width: 248rpx;
+	border: 1px solid #ACACAC;
+	background-color: #EFEFEF;
+}
+.lc-changePwd-again-text{
+	display: block;
+	width: 227rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-top: 6rpx;
+	margin-right: 85rpx;
+	margin-left: 33rpx
+}
+.lc-changePwd .redStar{
+	color: red;
+	position: absolute;
+	left: 14rpx;
+	top: -4rpx;
+}
+.lc-changePwd-old,.lc-changePwd-new,.lc-changePwd-again{
+	position: relative;
+}
+.lc-changePwd-forget{
+	width: 111rpx;
+	height: 40rpx;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color: #787777;
+	position: absolute;
+	left: 491rpx;
+}
+.lc-changePwd-save{
+	width: 587rpx;
+	height: 95rpx;
+	border: 2rpx solid #AAAAAA;
+	position: absolute;
+	left: 80rpx;
+	bottom: 140rpx;
+	border-radius: 17rpx;
+}
+.lc-changePwd-save .lc-changePwd-save-btn{
+	width: 257rpx;
+	height: 47rpx;
+	font-size: 36rpx;
+	line-height: 47rpx;
+	color: #262626;
+	margin-top: 24rpx;
+}
+button[plain]{
+	border: none;
+}
+.lc-changePwd-tips{
+	display: block;
+	width: 468rpx;
+	height: 123rpx;
+	line-height: 36rpx;
+	font-size: 24rpx;
+	color: #A8A8A8;
+	margin-left: 33rpx;
+	margin-top: 40rpx;
+}

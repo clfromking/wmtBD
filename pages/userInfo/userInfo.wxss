@@ -1,0 +1,56 @@
+.lc-userInfo-first{
+	margin-top: 46rpx;
+}
+.lc-userInfo{
+	margin-left: 74rpx;
+	margin-bottom: 51rpx;
+}
+.lc-userInfo-key{
+	margin-right: 145rpx;
+	width: 62rpx;
+	height: 40rpx;
+	display: inline-block;
+	font-size: 24rpx;
+	color: #4F4F4F;
+	line-height: 40rpx;
+}
+.lc-userInfo-val{
+	width: 60rpx;
+	height: 36rpx;
+	display: inline-block;
+	font-size: 24rpx;
+	line-height: 33rpx;
+	color: #8A8989;
+}
+.lc-userInfo-second .tel-val{
+	width: 162rpx;
+	height: 35rpx;
+}
+.lc-userInfo-third .department-val{
+	width: 102rpx;
+	height: 35rpx;
+}
+.lc-userInfo-fourth .entrytime-key{
+	width: 121rpx;
+	height: 40rpx;
+	margin-right: 86rpx;
+}
+.lc-userInfo-fourth .entrytime-val{
+	width: 121rpx;
+	height: 35rpx;
+}
+.lc-userInfo-fifth .changepwd-key{
+	width: 121rpx;
+	height: 40rpx;
+}
+.lc-userInfo-fifth .lc-userInfo-mt{
+	width: 22rpx;
+	height: 14.5rpx;
+	display: inline-block;
+	color: #B5B5B5;
+	position: absolute;
+	right: 39rpx;
+}
+.lc-userInfo-fifth{
+	position: relative;
+}

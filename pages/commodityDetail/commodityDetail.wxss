@@ -1,0 +1,96 @@
+.detail>view{
+	overflow: hidden;
+}
+.lc-detail-name{
+	position: relative;
+}
+.lc-detail-img{
+	position: relative;
+}
+.textFont{
+	font-size: 28rpx;
+	color: #4F4F4F;
+	margin-left: 74rpx;
+}
+.showFont{
+	font-size: 24rpx;
+	color: #8A8989;
+}
+.textFour{
+	display: block;
+	width: 121rpx;
+	height: 40rpx;
+	line-height: 40rpx;	
+}
+.textFive{
+	display: block;
+	width: 147rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+}
+.lc-detail-name-text{
+	margin-top: 40rpx;
+	margin-bottom: 28rpx;  
+}
+.lc-detail-name-show{
+	margin-left : 74rpx;
+	margin-bottom: 32rpx;
+}
+.lc-detail-img-show image{
+	display: block;
+	width: 135rpx;
+	height: 135rpx;
+	background-color: #D8D8D8;
+	margin-right: 32rpx;
+	margin-top: 32rpx;
+	margin-bottom: 38rpx;
+}
+.lc-detail-img-show-first{
+	margin-left: 74rpx;
+}
+.left lc-detail-img-show-last{
+	margin-right: 0rpx;
+}
+.lc-detail-merchant-show{
+	margin-left: 40rpx;
+}
+.lc-detail-area-text{
+	margin-top: 31rpx;
+	margin-bottom: 32rpx;
+}
+.lc-detail-area-show{
+	margin-left: 146rpx;
+	margin-top: 33rpx;
+	margin-bottom: 42rpx;
+}
+.lc-detail-detail-show{
+	margin-left: 146rpx;
+	margin-bottom: 43rpx;
+}
+.lc-detail-supplier-show{
+	margin-top: 4rpx;
+	margin-left: 121rpx;
+	margin-bottom: 38rpx;
+}
+.lc-detail-chargeName-show{
+	margin-top: 4rpx;
+	margin-left: 121rpx;
+	margin-bottom: 43rpx;
+}
+.lc-detail-chargeTel-show{
+	margin-top: 4rpx;
+	margin-left: 121rpx;
+}
+.lc-detail-name .redStar{
+	color: red;
+	position: absolute;
+	left: 58rpx;
+	top: 30rpx;
+}
+.lc-detail-img .redStar{
+	color: red;
+	position: absolute;
+	left: 58rpx;
+	top: -10rpx;
+}
+

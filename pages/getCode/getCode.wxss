@@ -1,0 +1,38 @@
+.lc-getCode-tel{
+	margin-top: 40rpx;
+	margin-left: 44rpx;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	color: #4F4F4F;
+	width: 177rpx;
+	height: 40rpx;
+}
+.lc-getCode-text{
+	display: block;
+	width: 98rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-left: 44rpx;
+	margin-top: 18rpx;
+}
+.lc-getCode-input{
+	width: 177rpx;
+	height: 40rpx;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	margin-top: 50rpx;
+	margin-left: 102rpx;
+}
+.lc-getCode-btn{
+	width: 176rpx;
+	height: 54rpx;
+	border: 1rpx solid #5BA2FD;
+	font-size: 24rpx;
+	color: #5BA2FD;
+	line-height: 54rpx;
+	text-align: center;
+	margin-top: 44rpx;
+	margin-left: 60rpx;
+}

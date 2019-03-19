@@ -1,12 +1,134 @@
 /* pages/input/input.wxss */
-.lc-input-captcha{
-	margin-left: 100rpx;
+.click{
+	margin-top: 80rpx;
 }
-.choose{
+.click .click-text1{
+	width: 164rpx;
+	height: 47rpx;
+	font-size: 32rpx;
+	display: block;
+	float: left;
+	margin-left: 159.5rpx;
+	line-height: 45rpx;
+	color: #262626;
+}
+.click .click-text2{
+	width: 187rpx;
+	height: 47rpx;
+	font-size: 32rpx;
+	display: block;
+	float: right;
+	margin-right: 159.5rpx;
+	line-height: 45rpx;
+	color: #262626;
+}
+.click .choose{
+	color: #5BA2FD;
+}
+
+.lc-input-enterpwd{
+	margin-top: 71rpx;
+	width: 750rpx;
+}
+.lc-input-enterpwd-tel{
+	margin-left: 127rpx;
+}
+.lc-input-enterpwd-tel text{
+	display: block;
+	width: 86rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-right: 39rpx;
+	float: left;
+}
+.lc-input-enterpwd-tel input{
+	display: block;
+	width: 175rpx;
+	height: 40rpx;
+	min-height: 40rpx;
+	line-height: 40rpx;
+	color: #D0D0D0;
+	font-size: 28rpx;
+}
+.placeholder-class{
+	height: 40rpx;
+	min-height: 40rpx;
+	color: #D0D0D0;
+	font-size: 28rpx;
+	line-height: 40rpx;
+}
+.lc-input-enterpwd-tel view{
+	font-size: 28rpx;
 	color: red;
 }
-.test{
-	width: 200rpx;
-	height: 50rpx;
-	background-color: red;
+.lc-input-enterpwd-pwd{
+	margin-top: 72rpx;
+	margin-left: 127rpx;
+}
+.lc-input-enterpwd .lc-input-enterpwd-pwd text{
+	display: block;
+	width: 86rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-right: 39rpx;
+	float: left;
+}
+.lc-input-enterpwd .lc-input-enterpwd-pwd input{
+	display: block;
+	width: 175rpx;
+	height: 40rpx;
+	min-height: 40rpx;
+	line-height: 40rpx;
+	color: #D0D0D0;
+	font-size: 28rpx;
+}
+.lc-input-btn{
+	width: 587rpx;
+	height: 95rpx;
+	margin-top: 262rpx;
+	display: block;
+	color: #AAAAAA;
+}
+
+.lc-input-entercaptcha .lc-input-enterpwd-captcha{
+	margin-top: 72rpx;
+	margin-left: 127rpx;
+	position: relative;
+}
+.lc-input-entercaptcha{
+	margin-top: 71rpx;
+	width: 750rpx;
+}
+.lc-input-entercaptcha .lc-input-enterpwd-captcha text{
+	display: block;
+	width: 86rpx;
+	height: 40rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	color: #4F4F4F;
+	margin-right: 39rpx;
+	float: left;
+}
+
+.lc-input-entercaptcha .lc-input-enterpwd-captcha input{
+	display: block;
+	width: 175rpx;
+	height: 40rpx;
+	min-height: 40rpx;
+	line-height: 40rpx;
+	color: #D0D0D0;
+	font-size: 28rpx;
+}
+.lc-input-entercaptcha .lc-input-enterpwd-captcha button{
+    height: 80rpx;
+	width: 220rpx;
+	font-size: 30rpx;
+	position: absolute;
+	right: 40rpx;
+	top: -30rpx;
+	color: #AAAAAA;
 }

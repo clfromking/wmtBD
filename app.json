@@ -1,14 +1,18 @@
 {
   "pages":[
-   
-    
+    "pages/getCode/getCode",
+    "pages/changePwd/changePwd",
+    "pages/changePwdTwo/changePwdTwo",
+    "pages/commodityList/commodityList",    
+    "pages/commodityDetail/commodityDetail",
+    "pages/findCommodity/findCommodity",
     "pages/index/index",
     "pages/myBusiness/myBusiness",
     "pages/basisData/basisData",
     "pages/input/input",
     "pages/registerBusiness/registerBusiness",
     "pages/authorization/authorization",
-    
+    "pages/userInfo/userInfo",
     "pages/login/login"
   ],
   "permission" : {

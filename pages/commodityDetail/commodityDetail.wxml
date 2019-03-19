@@ -1,0 +1,45 @@
+<view class="detail">
+   <view class="lc-detail-name">
+	  	<text class="lc-detail-name-text textFont textFour">商品名称</text>
+	  	<view class="lc-detail-name-show showFont">{{dataSource.name}}</view>
+	  	<text class="redStar">*</text>
+   </view>
+   <view class="lc-detail-img">
+	  	<text class="lc-detail-img-text textFont textFour">商品图片</text>
+	  	<view class="lc-detail-img-show clearfix">
+			<image class="left lc-detail-img-show-first">	
+			</image>
+			<image class="left">	
+			</image>
+			<image class="left">	
+			</image>
+			<image class="left lc-detail-img-show-last">	
+			</image>
+	  	</view>
+	  	<text class="redStar">*</text>
+   </view>
+   <view class="lc-detail-merchant">
+	  <text class="lc-detail-merchant-text textFont">使用此商品的商户</text>
+	  <text class="lc-detail-merchant-show showFont">{{dataSource.merchant}}</text>
+   </view>
+   <view class="lc-detail-area clearfix">
+	  <text class="lc-detail-area-text textFont textFour left">商品区域</text>
+	  <text class="lc-detail-area-show showFont left">{{dataSource.area}}</text>
+   </view>
+   <view class="lc-detail-detail clearfix">
+	  <text class="lc-detail-detail-text textFont textFour left">详细地址</text>
+	  <text class="lc-detail-detail-show showFont left">{{dataSource.detail}}</text>
+   </view>
+   <view class="lc-detail-supplier clearfix">
+	  <text class="lc-detail-supplier-text textFont textFive left">供应商名称</text>
+	  <text class="lc-detail-supplier-show showFont left">{{dataSource.supplier}}</text>
+   </view>
+   <view class="lc-detail-chargeName clearfix">
+	  <text class="lc-detail-chargeName-text textFont textFive left">负责人姓名</text>
+	  <text class="lc-detail-chargeName-show showFont left">{{dataSource.chargeName}}</text>
+   </view>
+   <view class="lc-detail-chargeTel clearfix">
+	  <text class="lc-detail-chargeTel-text textFont textFive left">负责人电话</text>
+	  <text class="lc-detail-chargeTel-show showFont left">{{dataSource.chargeTel}}</text>
+   </view>
+</view>
