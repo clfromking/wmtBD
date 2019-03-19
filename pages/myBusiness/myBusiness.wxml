@@ -3,7 +3,7 @@
   
   <view class='jw-title clearfix'>
     <text class='left'>共{{total}}个商户</text>
-    <text class='right'>地图查看</text>
+    <text class='right' bindtap='goMap'>地图查看</text>
   </view>
 
   <view class='jw-list' wx:for='{{list}}' wx:key='item'>

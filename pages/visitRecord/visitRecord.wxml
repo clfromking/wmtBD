@@ -1,0 +1,21 @@
+<!--pages/visitRecord/visitRecord.wxml-->
+<view hidden='{{nothing}}' class='jw-container'>
+  <view class='jw-title'>{{title}}</view>
+  <view class='jw-list'>
+    <view class='jw-list-item'  wx:for='{{list}}' wx:key='item'>
+      <view class='clearfix'>
+        <view class='left'>asd</view>
+        <view class='right'>asd</view>
+      </view>
+      <view class='ellipsis'>asd</view>
+    </view>
+    
+  </view>
+  <view class='jw-footer'>{{footer}}</view>
+</view>
+
+<view hidden='{{type==1}}' class='jw-addRecord-view'>
+  <view bindtap='submitRecord' class='jw-addRecord'>提交拜访记录</view>
+</view>
+
+<view hidden='{{!nothing}}' class='jw-nothing'>暂无拜访记录</view>

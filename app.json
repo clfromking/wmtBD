@@ -1,11 +1,15 @@
 {
   "pages":[
-   
     
     "pages/index/index",
+    "pages/submitRecord/submitRecord",
     "pages/myBusiness/myBusiness",
     "pages/basisData/basisData",
+    "pages/visitRecord/visitRecord",
+    "pages/siteData/siteData",
     "pages/input/input",
+    "pages/map/map",
+    
     "pages/registerBusiness/registerBusiness",
     "pages/authorization/authorization",
     

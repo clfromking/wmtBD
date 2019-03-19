@@ -39,7 +39,7 @@
   color: red
 }
 .blue{
-  color: #5BA2FD;
+  color: #5BA2FD !important;
 }
 .xing{
   color: red;
@@ -48,4 +48,10 @@
 
 .placeholderInput{
   color: #aeaeae !important
+}
+
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
 }

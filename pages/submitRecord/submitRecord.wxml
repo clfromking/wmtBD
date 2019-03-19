@@ -1,0 +1,56 @@
+<!--pages/submitRecord/submitRecord.wxml-->
+<view class='jw-container'>
+  
+  <view class='jw-form-item'>
+    <view class='jw-formItem-title'><text class='red xing'>*</text>拜访类型</view>
+    <picker class='pr' bindchange="pickerChange" data-index='0' value="{{businessIndex}}" range="{{businessTypes}}">
+      <form bindsubmit='getFormid' report-submit='true'>
+        <button form-type='submit' class='getFormIdBtn' ></button>
+        <view class="picker {{businessTypes[businessIndex]?'':'placeholderInput'}}">
+          {{businessTypes[businessIndex]||"请选择拜访类型"}}
+        </view>
+      </form>
+    </picker>
+  </view>
+
+  <view class='jw-headImg-view'>
+    <view class='jw-headImg-title'><text class='red xing'>*</text>门头照</view>
+    <scroll-view scroll-x class='jw-headScollView'>
+      <view class='jw-headImg-item' wx:for='{{headImgs}}' wx:key='item'>
+        <image class='jw-headImg' mode='aspectFit' src='{{item}}'></image>
+      </view>
+      <view bindtap='addImg' data-index='0' class='jw-addHeadImg' hidden='{{headImgs.length>=9}}'>
+        <view class='heng'></view>
+        <view class='shu'></view>
+      </view>
+    </scroll-view> 
+  </view>
+
+  <view class='jw-headImg-view'>
+    <view class='jw-headImg-title'><text class='red xing'>*</text>店内照片</view>
+    <scroll-view scroll-x class='jw-headScollView'>
+      <view class='jw-headImg-item' wx:for='{{insideImgs}}' wx:key='item'>
+        <image class='jw-headImg' mode='aspectFit' src='{{item}}'></image>
+      </view>
+      <view bindtap='addImg' data-index='1' class='jw-addHeadImg' hidden='{{insideImgs.length>=9}}'>
+        <view class='heng'></view>
+        <view class='shu'></view>
+      </view>
+    </scroll-view> 
+
+    <view class='jw-againTime-view'>
+      <view class='jw-againTime-title'><text class='red xing'>*</text>下次拜访时间</view>
+      <picker style='padding-left:120rpx;margin-top:20rpx' mode="date" value="{{date}}" start="{{nowDate}}" bindchange="bindDateChange">
+        <view class="picker {{date?'':'placeholderInput'}}">
+          {{date||"请选择过期时间"}}
+        </view>
+      </picker>
+    </view>
+
+    <view class='jw-visitRecord-view'>
+      <view class='jw-visitRecord-title'><text class='red xing'>*</text>拜访记录</view>
+    </view>
+
+  </view>
+
+</view>

@@ -195,10 +195,10 @@ App({
                   if(res.authSetting["scope.userLocation"]){
 
                   }else{
-                    count++
-                    if (count <= 1) {
-                      return
-                    }
+                    // count++
+                    // if (count <= 1) {
+                    //   return
+                    // }
                     wx.navigateTo({
                       url: '../authorization/authorization',
                     })
@@ -215,11 +215,11 @@ App({
               if (res.authSetting["scope.userLocation"]) {
               }
               else {
-                count++
-                console.log(count)
-                if (count <= 1) {
-                  return
-                }
+                // count++
+                // console.log(count)
+                // if (count <= 1) {
+                //   return
+                // }
                 wx.navigateTo({
                   url: '../authorization/authorization',
                 })

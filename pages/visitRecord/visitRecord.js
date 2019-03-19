@@ -1,4 +1,4 @@
-// pages/myBusiness/myBusiness.js
+// pages/visitRecord/visitRecord.js
 const app = getApp()
 Page({
 
@@ -6,46 +6,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    total:0,
-    index:0,
-    pageSize:5,
+    title:'小马快餐（酒仙桥店）',
     list:[],
-    footer:'加载中',
-    nothing:true,
-    type:'',
+    total: 0,
+    index: 0,
+    pageSize: 5,
+    footer: '加载中',
+    nothing: true,
+    type:''
   },
 
-  goMap:function(){
+  submitRecord:function(){
     wx.navigateTo({
-      url: '../map/map',
+      url: '../submitRecord/submitRecord',
     })
-  },
-
-  callPhone:function(e){
-    console.log(e.currentTarget.dataset.index)
-    wx.makePhoneCall({
-      phoneNumber: '',
-    })
-  },
-
-  goNav:function(e){
-    switch(Number(e.currentTarget.dataset.id)){
-      case 0:
-        wx.navigateTo({
-          url: '../basisData/basisData',
-        })
-        break;
-      case 1:
-        wx.navigateTo({
-          url: '../siteData/siteData?type='+this.data.type,
-        })
-        break;
-      case 2:
-        wx.navigateTo({
-          url: '../visitRecord/visitRecord?type='+this.data.type,
-        })
-        break;
-    }
   },
 
 
@@ -53,23 +27,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.type)
     this.setData({
       type:options.type
     })
-    if(Number(options.type) == 0){
-      wx.setNavigationBarTitle({
-        title: '我的商户'
-      })
-    }
-    else{
-      
-    }
-
-    this.loadMsg()
     
-
-
+    this.loadMsg()
   },
 
   /**
@@ -112,11 +74,11 @@ Page({
    */
   onReachBottom: function () {
     this.setData({
-      index:this.data.index + 1
+      index: this.data.index + 1
     })
-    if(this.data.list.length >= this.data.total){
+    if (this.data.list.length >= this.data.total) {
       this.setData({
-        footer:'已为您显示全部'
+        footer: '已为您显示全部'
       })
       return
     }
@@ -130,7 +92,7 @@ Page({
 
   },
 
-  loadMsg:function(){
+  loadMsg: function () {
     var postData = {
       'accessToken': '2116ccc06b8047bdaffd67f76fd882c8',
       'index': this.data.index,
@@ -138,18 +100,18 @@ Page({
     }
     app.postData('/order/my', postData).then(res => {
       console.log(res)
-      if(res.data.data.total <= 0){
+      if (res.data.data.total <= 0) {
         this.setData({
-          nothing:true
+          nothing: true
         })
       }
-      else{
+      else {
         this.setData({
           nothing: false
         })
       }
       var list = this.data.list
-      for(let i =0 ;i<res.data.data.list.length;i++){
+      for (let i = 0; i < res.data.data.list.length; i++) {
         list.push(res.data.data.list[i])
       }
       this.setData({

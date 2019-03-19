@@ -1,0 +1,42 @@
+/* pages/map/map.wxss */
+cover-view{
+  white-space: pre-line;
+}
+.jw-cover-title{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.jw-cover-title cover-view{
+  width: 100%;
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.jw-cover-detail{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  white-space: pre-wrap !important;
+  height: 180rpx;
+}
+.blue{
+  text-align: right
+}
+.jw-cover-path{
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 40rpx
+}
+
+.show{
+  
+  /* transition: height 0.8s */
+}
