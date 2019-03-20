@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    formData : {
+      new : '',
+      again : ''
+    }
   },
 
   /**
@@ -62,5 +65,47 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getInput : function(e) {
+    var key = '';
+    switch(Number(e.currentTarget.dataset.index)){
+      case 0 :
+        key = 'formData.new'
+        break;
+      case 1 :
+        key = 'formData.again'
+        break;
+    }
+    this.setData({
+      [key] : e.detail.value
+    })
+  },
+  save : function() {
+    var newPwd = this.data.formData.new.trim();
+    var againPwd = this.data.formData.again.trim();
+    // if(!newPwd){
+    //   wx.showToast({
+    //     title : '新密码不能为空！',
+    //     icon : 'none',
+    //     mask : true,
+    //     duration : 1000
+    //   })
+    //   return;
+    // }else if(!againPwd){
+    //   wx.showToast({
+    //     title : '再次输入新密码不能为空',
+    //     icon : 'none',
+    //     mask : true,
+    //     duration : 1000
+    //   })
+    //   return;
+    // }
+    var postData = {
+      newPwd : newPwd,
+      againPwd : againPwd
+    }
+     wx.navigateTo({
+      url : '../userInfo/userInfo'
+    })
   }
 })

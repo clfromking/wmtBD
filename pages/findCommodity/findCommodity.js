@@ -131,31 +131,34 @@ Page({
     }
 
     this.setData({
-      [key] : e.detail.value
+      [key] : e.detail.value.trim()
     })
   },
   // 提交表单
   submitInput : function() {
-    if(this.data.formData.chargeTel.length !== 11){
-      wx.showToast({
-        title : '手机格式不正确',
-        icon : 'none',
-        mask : true,
-        duration : 1000
-      })
-      return
-    }
-    else if(this.data.formData.name == ''){
-       wx.showToast({
-        title : '必填项目不能为空',
-        icon : 'none',
-        mask : true,
-        duration : 1000
-      })
-      return
-    }
-    var postData = this.data.formData
-    app.postData('', postData)
-       .then()
+    // if(this.data.formData.chargeTel.length !== 11){
+    //   wx.showToast({
+    //     title : '手机格式不正确',
+    //     icon : 'none',
+    //     mask : true,
+    //     duration : 1000
+    //   })
+    //   return
+    // }
+    // else if(this.data.formData.name == ''){
+    //    wx.showToast({
+    //     title : '必填项目不能为空',
+    //     icon : 'none',
+    //     mask : true,
+    //     duration : 1000
+    //   })
+    //   return
+    // }
+    // var postData = this.data.formData
+    // app.postData('', postData)
+    //    .then()
+    // wx.navigateTo({
+    //   url : '../commodityList/commodityList'
+    // })
   }
 })

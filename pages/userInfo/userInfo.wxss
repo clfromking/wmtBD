@@ -29,6 +29,9 @@
 .lc-userInfo-third .department-val{
 	width: 102rpx;
 	height: 35rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
 }
 .lc-userInfo-fourth .entrytime-key{
 	width: 121rpx;

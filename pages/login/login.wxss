@@ -1,1 +1,51 @@
-/* pages/login/login.wxss */
+.lc-login{
+	margin-top: 
+}
+.lc-login-logo{
+	width: 160rpx;
+	height: 160rpx;
+	margin: 0 auto;
+	margin-top: 151rpx;
+}
+.lc-login-logo image{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.lc-login-title{
+	display: block;
+	font-size: 38rpx;
+	color: #111;
+	text-align: center;
+	margin-top: 16rpx;
+}
+.lc-login-border{
+	width: 630rpx;
+	height: 2rpx;
+	background-color: #e9e9e9;
+	margin: 57rpx auto 0;
+}
+.lc-login-tips{
+	font-size: 34rpx;
+	color: #111;
+	display: block;
+	width: 630rpx;
+	margin: 0 auto;
+	margin-top: 50rpx;
+}
+.lc-login-content{
+	width: 630rpx;
+	margin: 0 auto;
+	margin-top: 34rpx;
+	font-size: 30rpx;
+	color: #666;
+}
+.lc-login-btn{
+	width: 630rpx;
+	height: 96rpx;
+	border-radius: 6rpx;
+	color: #fff;
+	font-size: 38rpx;
+	background-color: #3A4BF9;
+	margin-top: 31rpx;
+}

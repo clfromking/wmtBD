@@ -1,0 +1,20 @@
+<view class="lc-changePwdTwo">
+   <form action="">
+      <view class="lc-changePwdTwo-old clearfix">
+        <text class="redStar">*</text>
+        <text class="lc-changePwdTwo-old-text left">新密码</text>
+        <input type="text" password class="lc-changePwdTwo-old-input lc-changePwdTwo-input left" bindinput="getInput" placeholder-class="placeholderInput" data-index="0" />
+      </view>
+      <view class="lc-changePwdTwo-old clearfix">
+        <text class="redStar">*</text>
+        <text class="lc-changePwdTwo-new-text left">请再次输入新密码</text>
+        <input type="text" password class="lc-changePwdTwo-new-input lc-changePwdTwo-input left" bindinput="getInput" data-index="1" placeholder-class="placeholderInput" />
+      </view>
+      <view class="lc-changePwdTwo-tips">
+        密码最多需要6-12位，可以是大写字母， 小写字母，数字，一种或多种
+      </view>
+      <view class="lc-changePwdTwo-btn-wrap">
+        <button class="lc-changePwdTwo-btn" plain bindtap="save">保存</button>
+      </view>
+   </form>
+</view>

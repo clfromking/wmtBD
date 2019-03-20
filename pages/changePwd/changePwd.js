@@ -82,9 +82,8 @@ Page({
         key = 'formData.againPwd'
         break;
     }
-    console.log(key)
     this.setData({
-      [key] : e.detail.value
+      [key] : e.detail.value.trim()
     })
   },
   toGetcode : function() {
@@ -93,30 +92,54 @@ Page({
     })
   },
   savePwd : function() {
-    // if(!this.data.oldPwd){
+    var oldPwd = this.data.formData.oldPwd.trim();
+    var newPwd = this.data.formData.newPwd.trim();
+    var againPwd = this.data.formData.againPwd.trim();
+    // if(!oldPwd){
     //   wx.showToast({
     //     title : '原密码不能为空！',
     //     icon : 'none',
     //     mask : true,
     //     duration : 1000
     //   })
-    // }else if(!this.data.newPwd){
+    //   return;
+    // }else if(!newPwd){
     //   wx.showToast({
     //     title : '新密码不能为空！',
     //     icon : 'none',
     //     mask : true,
     //     duration : 1000
     //   })
-    // }else if(!this.data.againPwd){
+    //   return;
+    // }else if(!againPwd){
     //   wx.showToast({
     //     title : '新密码不能为空！',
     //     icon : 'none',
     //     mask : true,
     //     duration : 1000
     //   })
-    // }else if
-    // console.log(typeof(this.data.newPwd))
-    // var postData = this.data.formData
-    // app.post('', postData)
+    //   return;
+    // }else if(newPwd != againPwd){
+    //   wx.showToast({
+    //     title : '两次新密码不一致',
+    //     icon : 'none',
+    //     mask : true,
+    //     duration : 1000
+    //   })
+    //   return;
+    // }else if((newPwd.length < 6 || newPwd.length > 12) || (againPwd.length < 6 || againPwd.length > 12)){
+    //   wx.showToast({
+    //     title : '新密码格式不正确',
+    //     icon : 'none',
+    //     mask : true,
+    //     duration : 1000
+    //   })
+    //   return;
+    // }
+    
+    wx.navigateTo({
+      url : '../userInfo/userInfo'
+    })
+    
   }
 })

@@ -15,6 +15,9 @@
 .showFont{
 	font-size: 24rpx;
 	color: #8A8989;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
 }
 .textFour{
 	display: block;

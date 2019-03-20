@@ -83,28 +83,32 @@ Page({
                 'iv' : res1.iv,
                 'encryptedData' : res1.encryptedData
               }  
-              app.postData('', postData)
-                 .then((res2) => {
-                    if(res2.data.code == 200){
-                      wx.setStorage({
-                        key : '',
-                        data : res.data.data,
-                        success : function() {
-                          wx.showToast({
-                            title : '登录成功',
-                            icon : 'none',
-                            mask : true,
-                            duration : 1500
-                          })
-                          setTimeout(function () {
-                            wx.navigateTo({
-                              url : '../input/input'
-                            })
-                          },1500)
-                        }
-                      })
-                    }
-                 })
+              // app.postData('', postData)
+              //    .then((res2) => {
+              //       if(res2.data.code == 200){
+              //         wx.setStorage({
+              //           key : '',
+              //           data : res.data.data,
+              //           success : function() {
+              //             wx.showToast({
+              //               title : '登录成功',
+              //               icon : 'none',
+              //               mask : true,
+              //               duration : 1500
+              //             })
+              //             setTimeout(function () {
+              //               wx.navigateTo({
+              //                 url : '../input/input'
+              //               })
+              //             },1500)
+              //           }
+              //         })
+              //       }
+              //    })
+              wx.navigateTo({
+                url : '../input/input'
+              })
+              wx.hideLoading()
             }
           })
         }

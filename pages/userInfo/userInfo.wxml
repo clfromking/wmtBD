@@ -15,8 +15,8 @@
 		<text class="lc-userInfo-key entrytime-key">入职时间</text>
 		<text class="lc-userInfo-val entrytime-val">2019-3-11</text>
 	</view>
-	<view class="lc-userInfo-fifth lc-userInfo">
+	<view class="lc-userInfo-fifth lc-userInfo" bindtap="toChangePwd">
 		<text class="lc-userInfo-key changepwd-key">修改密码</text>
-		<text class="lc-userInfo-mt" bindtap="toChangePwd">></text>
+		<text class="lc-userInfo-mt">></text>
 	</view>
 </view>

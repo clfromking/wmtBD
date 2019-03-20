@@ -12,7 +12,8 @@ Page({
     tips2 : '',
     pwd : '',
     captcha : '',
-    code : '获取验证码'
+    code : '获取验证码',
+    disabled : true
   },
   display1: function() {
     this.setData({
@@ -25,7 +26,7 @@ Page({
     })
   },
   entertel1: function(e) {
-    var tel1 = e.detail.value
+    var tel1 = e.detail.value.trim()
     this.setData({
       tel1 : tel1
     })
@@ -43,7 +44,7 @@ Page({
     }
   },
   entertel2: function(e) {
-    var tel2 = e.detail.value
+    var tel2 = e.detail.value.trim()
     this.setData({
       tel2 : tel2
     })
@@ -61,22 +62,26 @@ Page({
     }
   },
   enterpwd: function(e) {
-    var pwd = e.detail.value;
+    var pwd = e.detail.value.trim();
     this.setData({
       pwd : pwd
     })
   },
   entercaptcha: function(e) {
-    var captcha = e.detail.value;
+    var captcha = e.detail.value.trim();
     this.setData({
       captcha : captcha
     })
   },
   getcodes : function() {
+    if(this.data.code !== '获取验证码'){
+      return;
+    }
     var that = this;
     var code = 60;
     this.setData({
-      code : code
+      code : code,
+      disabled : true
     })
     for(var i = 1; i <= 60; i++){
       setTimeout(function() {
@@ -85,7 +90,8 @@ Page({
         })
         if(that.data.code == 0){
           that.setData({
-            code : '获取验证码'
+            code : '获取验证码',
+            disabled : false
           })
         }
       },1000 * i)
@@ -104,7 +110,9 @@ Page({
         captcha : this.data.captcha
       }
     }
-    console.log(postData)
+    wx.navigateTo({
+      url : '../index/index'
+    })
   },
   /**
    * 生命周期函数--监听页面加载

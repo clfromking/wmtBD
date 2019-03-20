@@ -80,3 +80,12 @@ button[plain]{
 .lc-list-image .scroll-view_x{
 	margin-bottom: 50rpx;
 }
+.lc-commodityList-space{
+	width: 328rpx;
+	height: 47rpx;
+	margin-top: 180rpx;
+	margin-left: 285rpx;
+	line-height: 45rpx;
+	font-size: 32rpx;
+	color: #4F4F4F;
+}

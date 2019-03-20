@@ -2,13 +2,18 @@
    <view class="lc-getCode-tel">
 	  {{tel}}
    </view>
-   <view class="lc-getCode-code clearfix">
-	  <text class="lc-getCode-text left">
-		 验证码
-	  </text>
-	  <input type="text" class="lc-getCode-input left placeholderInput" placeholder="请输入验证码" bindinput="getInput" />
-	  <view class="lc-getCode-btn left" bindtap="getCode">
-		 获取验证码
-	  </view>
-   </view>
+   <form action="">
+	  <view class="lc-getCode-code clearfix">
+		  <text class="lc-getCode-text left">
+			 验证码
+		  </text>
+		  <input type="text" class="lc-getCode-input left placeholderInput" placeholder="请输入验证码" bindinput="getInput" />
+		  <view class="lc-getCode-btn left" bindtap="getCode">
+			 {{captcha}}
+		  </view>
+	   </view>
+   </form>
+    <view class="lc-getCode-nextStep">
+	   <button class="lc-getCode-nextStep-btn" plain bindtap="nextStep">下一步</button>
+	</view>
 </view>

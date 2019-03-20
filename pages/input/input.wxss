@@ -31,7 +31,7 @@
 	width: 750rpx;
 }
 .lc-input-enterpwd-tel{
-	margin-left: 127rpx;
+	margin-left: 62rpx;
 }
 .lc-input-enterpwd-tel text{
 	display: block;
@@ -42,12 +42,13 @@
 	color: #4F4F4F;
 	margin-right: 39rpx;
 	float: left;
+	margin-top: 6rpx;
 }
 .lc-input-enterpwd-tel input{
 	display: block;
 	width: 175rpx;
-	height: 40rpx;
-	min-height: 40rpx;
+	height: 50rpx;
+	min-height: 50rpx;
 	line-height: 40rpx;
 	color: #D0D0D0;
 	font-size: 28rpx;
@@ -65,7 +66,7 @@
 }
 .lc-input-enterpwd-pwd{
 	margin-top: 72rpx;
-	margin-left: 127rpx;
+	margin-left: 62rpx;
 }
 .lc-input-enterpwd .lc-input-enterpwd-pwd text{
 	display: block;
@@ -76,12 +77,13 @@
 	color: #4F4F4F;
 	margin-right: 39rpx;
 	float: left;
+	margin-top: 6rpx;
 }
 .lc-input-enterpwd .lc-input-enterpwd-pwd input{
 	display: block;
 	width: 175rpx;
-	height: 40rpx;
-	min-height: 40rpx;
+	height: 50rpx;
+	min-height: 50rpx;
 	line-height: 40rpx;
 	color: #D0D0D0;
 	font-size: 28rpx;
@@ -96,7 +98,7 @@
 
 .lc-input-entercaptcha .lc-input-enterpwd-captcha{
 	margin-top: 72rpx;
-	margin-left: 127rpx;
+	margin-left: 62rpx;
 	position: relative;
 }
 .lc-input-entercaptcha{
@@ -112,13 +114,14 @@
 	color: #4F4F4F;
 	margin-right: 39rpx;
 	float: left;
+	margin-top: 6rpx;
 }
 
 .lc-input-entercaptcha .lc-input-enterpwd-captcha input{
 	display: block;
 	width: 175rpx;
-	height: 40rpx;
-	min-height: 40rpx;
+	height: 50rpx;
+	min-height: 50rpx;
 	line-height: 40rpx;
 	color: #D0D0D0;
 	font-size: 28rpx;
@@ -128,7 +131,7 @@
 	width: 220rpx;
 	font-size: 30rpx;
 	position: absolute;
-	right: 40rpx;
+	right: 80rpx;
 	top: -30rpx;
 	color: #AAAAAA;
 }

@@ -36,3 +36,21 @@
 	margin-top: 44rpx;
 	margin-left: 60rpx;
 }
+.lc-getCode-nextStep {
+	width: 587rpx;
+	height: 95rpx;
+	border: 1rpx solid #AAAAAA;
+	border-radius: 17rpx;
+	margin-top: 198rpx;
+	margin-left: 82rpx;
+}
+.lc-getCode-nextStep-btn{
+	width: 257rpx;
+	height: 47rpx;
+	line-height: 47rpx;
+	font-size: 36rpx;
+	margin-top: 24rpx;
+}
+button[plain]{
+	border: none;
+}

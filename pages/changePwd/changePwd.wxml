@@ -2,17 +2,17 @@
    <form action="">
 	  <view class="lc-changePwd-old clearfix">
 		 <text class="lc-changePwd-old-text lc-changePwd-text left">原密码</text>
-		 <input type="text" class="lc-changePwd-old-input lc-changePwd-input left placeholderInput" bindinput="getInputs" data-index="0" />
+		 <input type="text" class="lc-changePwd-old-input lc-changePwd-input left placeholderInput" bindinput="getInputs" data-index="0" password />
 		 <text class="redStar">*</text>
 	  </view>
 	  <view class="lc-changePwd-new clearfix">
 		 <text class="lc-changePwd-new-text lc-changePwd-text left">新密码</text>
-		 <input type="text" class="lc-changePwd-new-input lc-changePwd-input left placeholderInput" bindinput="getInputs" data-index="1" />
+		 <input type="text" class="lc-changePwd-new-input lc-changePwd-input left placeholderInput" bindinput="getInputs" data-index="1" password />
 		 <text class="redStar">*</text>
 	  </view>
 	  <view class="lc-changePwd-again clearfix">
 		 <text class="lc-changePwd-again-text left">请再次输入新密码</text>
-		 <input type="text" class="lc-changePwd-again-input lc-changePwd-input left placeholderInput" bindinput="getInputs" data-index="2" />
+		 <input type="text" class="lc-changePwd-again-input lc-changePwd-input left placeholderInput" bindinput="getInputs" data-index="2" password />
 		 <text class="redStar">*</text>
 	  </view>
    </form>

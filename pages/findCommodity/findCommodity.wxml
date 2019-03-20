@@ -7,8 +7,18 @@
 	   </view>
 	   <view class="lc-commodity-image">
 	   	  <text class="star">*</text>
-		  <text class="lc-commodity-image-text lc-commodity-text">商品图片</text>
-		  <view class="lc-commodity-image-img" bindtap="uploadimg"><text>+</text></view>
+		  <text class="lc-commodity-image-text">商品图片</text>
+		 <view class="clearfix">
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<image class="left"></image>
+		 	<view class="lc-commodity-image-img left" bindtap="uploadimg"><view>+</view></view>
+		 </view>
 	   </view>
 	   <view class="lc-commodity-Merchant clearfix">
 		  <text class="lc-commodity-Merchant-text left">使用此商品的商户</text>
@@ -40,10 +50,11 @@
 		  </text>
 		  <input type="text" placeholder="请输入负责人手机" placeholder-class="placeholderInput" class="lc-commodity-supplier-input lc-commodity-charge-input left" bindinput="getInput" data-index='6' />
 	   </view>
+	   <view class="lc-commodity-btn-box">
+		   <button plain bindtap="submitInput">
+				提交
+		   </button>	
+	   </view>
 	</form>
-	<view class="lc-commodity-btn-box">
-	   <button plain bindtap="submitInput">
-			提交
-	   </button>	
-	</view>
 </view>
+
