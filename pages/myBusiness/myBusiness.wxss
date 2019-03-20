@@ -66,11 +66,12 @@ page{
   /* margin-top: 20rpx */
 }
 .jw-phone{
-  width: 100rpx;
-  height: 100rpx;
-  background: #5BA2FD;
+  width: 50rpx;
+  height: 50rpx;
+  background: url('http://waimaitong.oss-cn-beijing.aliyuncs.com/wmtBD_wechat/phone.png') no-repeat;
+  background-size: 100% 100%;
   position: absolute;
-  top: 50rpx;
+  top: 70rpx;
   right: 50rpx
 }
 .jw-footer{

@@ -1,0 +1,10 @@
+<!--pages/myStaff/myStaff.wxml-->
+<view class='jw-container'>
+  <view class='jw-staff-list clearfix' bindtap='goStaffMsg'>
+    <view class='jw-staffName left ellipsis'>asd</view>
+    <view class='jw-staffPhone left'>13411311567</view>
+    <view class='jw-right right'>
+      <image mode='widthFix' src='http://waimaitong.oss-cn-beijing.aliyuncs.com/wechat/all/black_back.png'></image>
+    </view>
+  </view>
+</view>

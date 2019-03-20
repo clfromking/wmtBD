@@ -155,13 +155,14 @@ Page({
       title: '加载中',
       mask:true
     })
+    console.log(options.type)
     // options.type = 1
     this.setData({
       type:options.type
     })
 
     //请求数据 ，返回的数据为data
-    let data = ''
+    let data = '111'
     //if type ==0 && 没数据
 
     if(options.type == 0){      //看自己

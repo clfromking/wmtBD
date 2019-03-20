@@ -1,0 +1,37 @@
+/* pages/myStaff/myStaff.wxss */
+page{
+  padding-bottom: 40rpx
+}
+.jw-container{
+  width: 670rpx;
+  margin: 0 auto
+}
+.jw-staff-list{
+  font-size: 28rpx;
+  color: #4F4F4F;
+
+}
+.jw-staffName{
+  width: 160rpx;
+  margin-right: 20rpx
+}
+.jw-staffName,.jw-staffPhone{
+  height: 80rpx;
+  line-height: 80rpx
+}
+.jw-right{
+  height: 80rpx;
+  width: 22rpx;
+  position: relative
+}
+image{
+  display: block;
+  position: absolute;
+  width: 22rpx;
+  transform: rotate(180deg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto
+}

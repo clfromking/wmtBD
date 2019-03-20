@@ -12,6 +12,13 @@ Page({
     insideImgs:[],
     date: '',
     nowDate: '',
+    coordinates: '',
+    longitude: '',
+    latitude: '',
+    accuracy: '',
+    textAreaValue:'',
+    type:"",
+    disabled:false
   },
   
   addImg:function(e){
@@ -45,13 +52,59 @@ Page({
     })
   },
 
+  bindInput:function(e){
+    this.setData({
+      textAreaValue:e.detail.value
+    })
+  },
+
+  //开定位
+  openLocation: function () {
+    if (this.data.coordinates) {
+      return
+    }
+    app.chooseLocation()
+  },
+
+  submit:function(){
+    if(Number(this.data.businessIndex) < 0){
+      app.showToast('请先选择拜访类型')
+    }
+    else if (this.data.headImgs.length <= 0){
+      app.showToast('请先上传门头照')
+    }
+    else if (this.data.insideImgs.length <= 0){
+      app.showToast('请先上传店内照片')
+    }
+    else if(this.data.date === ''){
+      app.showToast('请先选择下次拜访时间')
+    }
+    else if (!this.data.textAreaValue.replace(/\s+/g, "")){
+      app.showToast('请先输入拜访记录')
+    }
+    else if (this.data.longitude === ''){
+      app.showToast('请先确认位置')
+    }
+    else{
+
+    }
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.type)
+    if(options.type == 0){
+      this.setData({
+        disabled:true
+      })
+    }
     var date = new Date()
     this.setData({
       nowDate: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate(),
+      type:options.type
       // date: date.toLocaleDateString().replace(/-/g, '/')
     })
   },
@@ -67,7 +120,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.getLocation({
+      type: 'gcj02',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          longitude: res.longitude,
+          latitude: res.latitude,
+          accuracy: res.accuracy,
+          coordinates: '经度：' + Number(res.longitude).toFixed(5) + ' 纬度：' + Number(res.latitude).toFixed(5),
+        })
+      },
+      fail: () => {
+        console.log('失败')
+        this.setData({
+          coordinates: ''
+        })
+      }
+    })
   },
 
   /**

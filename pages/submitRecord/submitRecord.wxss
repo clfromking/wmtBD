@@ -1,4 +1,7 @@
 /* pages/submitRecord/submitRecord.wxss */
+page{
+  padding-bottom: 40rpx
+}
 .jw-container{
   width: 690rpx;
   margin: 0 auto
@@ -75,4 +78,40 @@ picker{
 }
 .jw-againTime-view{
   margin-top: 62rpx
+}
+.jw-visitRecord-view{
+  margin-top: 74rpx
+}
+textarea{
+  border: 1rpx solid #979797;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #979797;
+  margin-left: 120rpx;
+  width: 500rpx;
+  margin-top: 30rpx
+}
+.jw-formItem{
+  display: flex
+}
+.jw-formItem-input{
+  font-size: 28rpx;
+  color: #5BA2FD;
+}
+.jw-submitBtn{
+  border: 1rpx solid #AAAAAA;
+  border-radius: 17rpx;
+  width: 586rpx;
+  height: 94rpx;
+  text-align: center;
+  line-height: 94rpx;
+  font-size: 36rpx;
+  color: #262626;
+  margin: 92rpx auto 0
+}
+.jw-againTime-title,.jw-visitRecord-title{
+  font-size: 32rpx;
+  color: #4F4F4F
 }

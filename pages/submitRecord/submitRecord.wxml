@@ -3,7 +3,7 @@
   
   <view class='jw-form-item'>
     <view class='jw-formItem-title'><text class='red xing'>*</text>拜访类型</view>
-    <picker class='pr' bindchange="pickerChange" data-index='0' value="{{businessIndex}}" range="{{businessTypes}}">
+    <picker disabled='{{disabled}}' class='pr' bindchange="pickerChange" data-index='0' value="{{businessIndex}}" range="{{businessTypes}}">
       <form bindsubmit='getFormid' report-submit='true'>
         <button form-type='submit' class='getFormIdBtn' ></button>
         <view class="picker {{businessTypes[businessIndex]?'':'placeholderInput'}}">
@@ -19,7 +19,7 @@
       <view class='jw-headImg-item' wx:for='{{headImgs}}' wx:key='item'>
         <image class='jw-headImg' mode='aspectFit' src='{{item}}'></image>
       </view>
-      <view bindtap='addImg' data-index='0' class='jw-addHeadImg' hidden='{{headImgs.length>=9}}'>
+      <view  bindtap='addImg' data-index='0' class='jw-addHeadImg' hidden='{{headImgs.length>=9||disabled}}'>
         <view class='heng'></view>
         <view class='shu'></view>
       </view>
@@ -32,25 +32,34 @@
       <view class='jw-headImg-item' wx:for='{{insideImgs}}' wx:key='item'>
         <image class='jw-headImg' mode='aspectFit' src='{{item}}'></image>
       </view>
-      <view bindtap='addImg' data-index='1' class='jw-addHeadImg' hidden='{{insideImgs.length>=9}}'>
+      <view  bindtap='addImg' data-index='1' class='jw-addHeadImg' hidden='{{insideImgs.length>=9||disabled}}'>
         <view class='heng'></view>
         <view class='shu'></view>
       </view>
     </scroll-view> 
 
-    <view class='jw-againTime-view'>
-      <view class='jw-againTime-title'><text class='red xing'>*</text>下次拜访时间</view>
-      <picker style='padding-left:120rpx;margin-top:20rpx' mode="date" value="{{date}}" start="{{nowDate}}" bindchange="bindDateChange">
-        <view class="picker {{date?'':'placeholderInput'}}">
-          {{date||"请选择过期时间"}}
-        </view>
-      </picker>
-    </view>
+    
 
-    <view class='jw-visitRecord-view'>
-      <view class='jw-visitRecord-title'><text class='red xing'>*</text>拜访记录</view>
-    </view>
 
   </view>
+  <view class='jw-againTime-view'>
+    <view class='jw-againTime-title'><text class='red xing'>*</text>下次拜访时间</view>
+    <picker disabled='{{disabled}}' style='padding-left:120rpx;margin-top:20rpx' mode="date" value="{{date}}" start="{{nowDate}}" bindchange="bindDateChange">
+      <view class="picker {{date?'':'placeholderInput'}}">
+        {{date||"请选择下次拜访时间"}}
+      </view>
+    </picker>
+  </view>
+
+  <view class='jw-visitRecord-view'>
+    <view class='jw-visitRecord-title'><text class='red xing'>*</text>拜访记录</view>
+    <textarea disabled='{{disabled}}' value='{{textAreaValue}}' bindinput='bindInput' placeholder='请输入拜访记录' maxlength='200'></textarea>
+  </view>
+
+  <view class='jw-formItem' style='margin-top:64rpx'>
+    <text class='jw-formItem-title' style='width:30%'><text class='red xing'>*</text>位置确认</text>
+    <view disabled='{{disabled}}' class='jw-formItem-input {{coordinates?"blue":"placeholderInput"}}' bindtap='openLocation' >{{coordinates||"尚未开启定位，请先开启。点击设置。"}}</view>
+  </view>
+  <view hidden='{{type == 0}}' bindtap='submit' class='jw-submitBtn'>提交</view>
 
 </view>

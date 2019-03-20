@@ -158,7 +158,7 @@ Page({
     else if (!(formData.address).replace(/\s+/g, "")){
       app.showToast('请输入详细地址')
     }
-    else if (!this.data.longitude){
+    else if (this.data.longitude === ''){
       app.showToast('请定位商户坐标')
     }
     else{

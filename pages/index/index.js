@@ -30,7 +30,7 @@ Page({
         break;
       case 3:
         wx.navigateTo({
-          url: '',
+          url: '../myStaff/myStaff',
         })
         break;
       case 4:

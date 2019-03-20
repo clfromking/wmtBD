@@ -16,9 +16,18 @@ Page({
     type:''
   },
 
-  submitRecord:function(){
+  submitRecord:function(e){
+    console.log(this.data.type)
+    // return
+    var type = ''
+    if(Number(this.data.type) == 1){
+      type = 0
+    }
+    else{
+      type = e.currentTarget.dataset.type
+    }
     wx.navigateTo({
-      url: '../submitRecord/submitRecord',
+      url: '../submitRecord/submitRecord?type='+ type,
     })
   },
 
