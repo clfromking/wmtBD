@@ -1,5 +1,5 @@
 <!--pages/submitRecord/submitRecord.wxml-->
-<view class='jw-container'>
+1<view class='jw-container'>
   
   <view class='jw-form-item'>
     <view class='jw-formItem-title'><text class='red xing'>*</text>拜访类型</view>
