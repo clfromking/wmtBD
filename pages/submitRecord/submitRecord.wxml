@@ -1,6 +1,5 @@
 <!--pages/submitRecord/submitRecord.wxml-->
-<view class='jw-container'>asdasdasd
-
+<view class='jw-container'>
   <view class='jw-form-item'>
     <view class='jw-formItem-title'><text class='red xing'>*</text>拜访类型</view>
     <picker disabled='{{disabled}}' class='pr' bindchange="pickerChange" data-index='0' value="{{businessIndex}}" range="{{businessTypes}}">

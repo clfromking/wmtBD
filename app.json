@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/login/login",
     "pages/index/index",
     "pages/myStaff/myStaff",
     "pages/getCode/getCode",
@@ -17,8 +18,7 @@
     "pages/input/input",
     "pages/registerBusiness/registerBusiness",
     "pages/authorization/authorization",
-    "pages/userInfo/userInfo",
-    "pages/login/login"
+    "pages/userInfo/userInfo"
   ],
   "permission" : {
     "scope.userLocation" : {

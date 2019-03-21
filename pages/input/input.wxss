@@ -114,13 +114,13 @@
 	color: #4F4F4F;
 	margin-right: 39rpx;
 	float: left;
-	margin-top: 6rpx;
+	margin-top: 10rpx;
 }
 
 .lc-input-entercaptcha .lc-input-enterpwd-captcha input{
 	display: block;
 	width: 175rpx;
-	height: 50rpx;
+	height: 54rpx;
 	min-height: 50rpx;
 	line-height: 40rpx;
 	color: #D0D0D0;

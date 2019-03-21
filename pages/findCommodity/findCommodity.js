@@ -157,8 +157,8 @@ Page({
     // var postData = this.data.formData
     // app.postData('', postData)
     //    .then()
-    // wx.navigateTo({
-    //   url : '../commodityList/commodityList'
-    // })
+    wx.navigateTo({
+      url : '../commodityList/commodityList'
+    })
   }
 })
